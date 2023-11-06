@@ -8,6 +8,7 @@ let i = document.querySelector('i');
 let flag = true
 button.addEventListener('click', myfunc);
 function myfunc() {
+  input.value= input.value.trim();
   if (input.value == ("") || input.value == (" ")) {
     // input.ariaPlaceholder("Write something");
     input.classList.toggle('displayInput');
@@ -73,6 +74,7 @@ function sort(reverse) {
     let image = document.createElement('img');
     image.src = './Group 56.svg';
     image.classList.add("image");
+
     element.children[0].append(image);
     image.addEventListener('click', () => {
       element.children[0].remove();
@@ -95,3 +97,8 @@ document.querySelector(".imagediv img").addEventListener("click", event => {
 })
 let button2 = document.querySelector('.button2');
 button2.addEventListener('click', myfunc)
+image.addEventListener('mouseover',()=>{
+  console.log(image)
+ image.src='./Group 70.svg'
+
+})
